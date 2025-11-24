@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfndyu5fipo7y"
+path="res://.godot/imported/Voicy_cero beam.mp3-25b511256e8c6726016ce661395b76c0.mp3str"
+
+[deps]
+
+source_file="res://sounds/Voicy_cero beam.mp3"
+dest_files=["res://.godot/imported/Voicy_cero beam.mp3-25b511256e8c6726016ce661395b76c0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
