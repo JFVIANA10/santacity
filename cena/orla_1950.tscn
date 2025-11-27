@@ -1,7 +1,9 @@
-[gd_scene load_steps=14 format=4 uid="uid://cr610tkl7bly0"]
+[gd_scene load_steps=16 format=4 uid="uid://cr610tkl7bly0"]
 
 [ext_resource type="PackedScene" uid="uid://cmvht5dgdktp6" path="res://entidades/level_end.tscn" id="1_4yklx"]
 [ext_resource type="Script" uid="uid://vnc5b66xmw3x" path="res://scripts/orla_1950.gd" id="1_6rnh2"]
+[ext_resource type="PackedScene" uid="uid://bxa2blrxvdqxd" path="res://entidades/plataforma.tscn" id="2_nte5b"]
+[ext_resource type="PackedScene" uid="uid://btjwgkoa5a60l" path="res://entidades/plataforma vertical.tscn" id="2_opa2w"]
 [ext_resource type="PackedScene" uid="uid://bdawd25baiuyh" path="res://entidades/camera.tscn" id="2_y1vtv"]
 [ext_resource type="Texture2D" uid="uid://c1o6mrhhprwgp" path="res://tiles/brick_tiles_1.png" id="3_6rnh2"]
 [ext_resource type="Texture2D" uid="uid://crdho0j7c2v5g" path="res://tiles/kenney_16x16.png" id="4_nte5b"]
@@ -8600,6 +8602,12 @@ sources/2 = SubResource("TileSetAtlasSource_j58ls")
 script = ExtResource("1_6rnh2")
 metadata/_edit_horizontal_guides_ = [260.0]
 metadata/_edit_vertical_guides_ = [10106.0]
+
+[node name="plataforma3" parent="." instance=ExtResource("2_opa2w")]
+position = Vector2(298, 54)
+
+[node name="plataforma2" parent="." instance=ExtResource("2_nte5b")]
+position = Vector2(159, 8)
 
 [node name="LevelEnd" parent="." instance=ExtResource("1_4yklx")]
 z_index = 5

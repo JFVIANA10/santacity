@@ -398,7 +398,7 @@ script = SubResource("GDScript_ltmgc")
 size = Vector2(26, 29.5)
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
-collision_mask = 2
+collision_mask = 18
 script = ExtResource("1_11m8g")
 
 [node name="animacao_player" type="AnimatedSprite2D" parent="."]
