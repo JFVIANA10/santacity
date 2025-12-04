@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://dynrkmbvq1jah"]
+
+[ext_resource type="Texture2D" uid="uid://dt5j16xpdb1jm" path="res://personagem/Vampirebat.png" id="1_r6cdb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6cdb"]
+size = Vector2(37.760567, 24.37498)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksl4b"]
+atlas = ExtResource("1_r6cdb")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bygh7"]
+atlas = ExtResource("1_r6cdb")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yiils"]
+atlas = ExtResource("1_r6cdb")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hk865"]
+atlas = ExtResource("1_r6cdb")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpt7n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksl4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bygh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yiils")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hk865")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 11.0
+}]
+
+[node name="morcego" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(0, -6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_r6cdb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -3)
+scale = Vector2(0.7734375, 0.7890625)
+sprite_frames = SubResource("SpriteFrames_rpt7n")
+animation = &"fly"
+autoplay = "fly"
+frame_progress = 0.21070525

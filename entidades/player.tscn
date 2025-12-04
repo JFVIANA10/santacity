@@ -240,7 +240,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"ataque",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -405,8 +405,8 @@ script = ExtResource("1_11m8g")
 position = Vector2(-1, 1.500001)
 scale = Vector2(0.9910714, 0.90625)
 sprite_frames = SubResource("SpriteFrames_s7w6g")
-animation = &"squat"
-frame_progress = 0.4628796
+animation = &"ataque"
+frame_progress = 0.021129444
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 1.25)
