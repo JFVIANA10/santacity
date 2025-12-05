@@ -4,10 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://crdho0j7c2v5g" path="res://tiles/kenney_16x16.png" id="1_sxgov"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1fpxi"]
-size = Vector2(19, 32)
+size = Vector2(10, 30)
 
 [node name="portal" type="Node2D" groups=["portais"]]
 script = ExtResource("1_1fpxi")
+destino = "final"
+origem = "inicio"
+distancia = 11
+metadata/_edit_vertical_guides_ = [-10.0, 9.0]
+metadata/_edit_horizontal_guides_ = [16.0, -16.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_sxgov")
@@ -17,7 +22,7 @@ region_rect = Rect2(256, 48, 16, 32)
 [node name="Area2D" type="Area2D" parent="Sprite2D" groups=["portais"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
-position = Vector2(-0.5, 0)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_1fpxi")
 debug_color = Color(0.9791394, 0, 0.39433166, 0.41960785)
 

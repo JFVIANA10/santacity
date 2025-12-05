@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://cr610tkl7bly0"]
+[gd_scene load_steps=18 format=4 uid="uid://cr610tkl7bly0"]
 
 [ext_resource type="PackedScene" uid="uid://cmvht5dgdktp6" path="res://entidades/level_end.tscn" id="1_4yklx"]
 [ext_resource type="Script" uid="uid://vnc5b66xmw3x" path="res://scripts/orla_1950.gd" id="1_6rnh2"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cfmhymn1ijt0r" path="res://entidades/player.tscn" id="6_xcbx8"]
 [ext_resource type="AudioStream" uid="uid://c0hm8jq8akru0" path="res://musica/old city theme.ogg" id="8_y1vtv"]
 [ext_resource type="PackedScene" uid="uid://c3gufl13t1k23" path="res://entidades/jump_pad.tscn" id="9_xcbx8"]
+[ext_resource type="PackedScene" uid="uid://dwvpdhi016c87" path="res://entidades/portal.tscn" id="10_coj7i"]
 [ext_resource type="PackedScene" uid="uid://clxa43673np8w" path="res://entidades/npc move.tscn" id="12_xcbx8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5j4j6"]
@@ -8628,6 +8629,7 @@ tile_map_data = PackedByteArray("AAD//wQAAQA0AEoAAAD//wUAAQA0AEoAAAD//wYAAQA0AEo
 tile_set = SubResource("TileSet_humki")
 
 [node name="JumpPad" parent="plataforma" instance=ExtResource("9_xcbx8")]
+z_index = -1
 position = Vector2(3851, 30)
 
 [node name="JumpPad2" parent="plataforma" instance=ExtResource("9_xcbx8")]
@@ -8650,6 +8652,16 @@ position = Vector2(2618, 145)
 
 [node name="JumpPad8" parent="plataforma" instance=ExtResource("9_xcbx8")]
 position = Vector2(119, 48)
+
+[node name="portal" parent="plataforma" instance=ExtResource("10_coj7i")]
+position = Vector2(94, 38)
+distancia = 10
+
+[node name="portal2" parent="plataforma" instance=ExtResource("10_coj7i")]
+position = Vector2(413, 103)
+destino = "inicio"
+origem = "final"
+distancia = -15
 
 [node name="player" parent="." instance=ExtResource("6_xcbx8")]
 position = Vector2(37, 36)
